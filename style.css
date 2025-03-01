@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+p {
+    color: orange;
+}
+
+::-webkit-scrollbar {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: orange;
+}
+
+.welcome-back {
+    background-color: black;
+}
+
+.welcome {
+    display: block;
+    background: linear-gradient(45deg, red, yellow);
+    background-clip: text;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(0,0,0,0.001);
+    color: transparent;
+}
+
+ .find {
+    display: flex;
+    background: linear-gradient(to right , rgb(152, 25, 25) , rgb(232, 157, 18) 50% , red 99%);
+    height:30px;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+} 
+
+.find p {
+    margin-left: 20px;
+    font-size: 20px;
+    color: orange;
+}
+
+.find-icon {
+    display: flex;
+}
+
+.find-icon img {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.welcome-img {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    background: linear-gradient(to right , red , black 40%);
+}
+.img-welcome {
+    display: flex;
+    flex: 1;
+    max-height: 90%;
+}
+.img-welcome-introduce p {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    color: orange;
+    font-size: 20px;
+}
+
+.compare {
+    background-color: black;
+    display: block;
+}
+
+.main-compare-title {
+    display: grid;
+    background: linear-gradient(to right ,black, red 50%, black );
+    height: 45px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border: 1px solid orange;
+    font-size: 33px;
+    width: 100%;
+    text-align: center;
+    align-content: start;
+}
+
+.title {
+    display: grid;
+    height: 35px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border: 1px solid rgb(196, 132, 14);
+    background: linear-gradient(to right ,black, rgb(210, 72, 72) 50%, black );
+    font-size: 27px;
+    width: 100%;
+    text-align: center;
+    align-content: start;
+}
+
+.compare-to-ever {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "img1 img2";
+    height: 500px;
+    width: 100%;
+}
+
+.include {
+    display: flex;
+    height: 100px;
+}
+
+.include {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yesu {
+    width: 90%;
+    height: 100%;
+    border-right: 1px solid orange;
+}
+
+.yesu img {
+    width: 100%;
+    height: 500px;
+    margin: auto 5%;
+}
+
+.jie {
+    width: 90%;
+    height: 100%;
+    border-left: 1px solid orange;
+}
+
+.jie img {
+    width: 100%;
+    height: 500px;
+    margin: auto 5%;
+}
+
+.compare-to-ever p {
+    display: flex;
+    height: 100px;
+    flex-wrap: wrap;
+}
+
+.guodu {
+    height: 1200px;
+    background: linear-gradient(to bottom ,black, rgb(255, 242, 0),white);
+}
+
+.person-box {
+    height: 600px;
+    width: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="red" /><stop offset="30%" stop-color="orange" /><stop offset="60%" stop-color="yellow" /><stop offset="90%" stop-color="green" /></linearGradient><linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="blue" /><stop offset="30%" stop-color="indigo" /><stop offset="60%" stop-color="violet" /></linearGradient></defs><rect width="100%" height="100%" fill="url(#grad1)" /><rect width="100%" height="100%" fill="url(#grad2)" /></svg>');
+    background-size: cover;
+    animation: svgFlow 25s linear infinite;
+}
+
+.person-box-img01 {
+    display: flex;
+    border: 1px solid transparent;
+    justify-content: center;
+}
+.person-box-img01 img {
+    width: 30%;
+    height: 100%;
+    box-shadow: 5px 5px 5px black;
+    position: relative;
+}
+
+.person-box-img01 img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+    backdrop-filter: blur(10px) contrast(1.2);
+    z-index: 1;
+}
+
+@keyframes svgFlow {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: random(0%, 100%) random(0%, 100%);
+    }
+}
